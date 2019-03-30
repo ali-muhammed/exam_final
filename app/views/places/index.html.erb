@@ -33,11 +33,11 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="row">
     <% @places.each do |place| %>
-    <div class="col-sm-2">
+    <div class="col-sm-6">
       <div class="card" style="width: 10rem;">
-        <%# if place.picture.attached? %>
-        <%#= image_tag place.picture, size: 250,  class: "img-thumbnail" %>
-        <%# end %>
+        <% if place.picture.attached? %>
+          <%= image_tag place.picture, size: 250,  class: "img-thumbnail" %>
+        <% end %>
         <div class="card-body">
           <p class="card-text"><%= link_to place.title, place_path(place.id) %></p>
         </div>
@@ -46,3 +46,4 @@
     <% end %>
   </div>
 </div>
+<%= link_to "Add new place", new_place_path, class: 'btn btn-secondary' %>
