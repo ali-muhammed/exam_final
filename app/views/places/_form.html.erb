@@ -11,11 +11,7 @@
     <div class="form-row">
       <div class="form-group col-md-12">
         <%= f.label :category %>
-        <%= f.select :category, options_for_select(
-        [["Restaurants", 1], 
-        ["Cafes", 2], 
-        ["Pubs", 3], 
-        ["Taverns",4]])%>
+        <%= f.collection_select :category_id, Category.all, :id, :title %>
       </div>
     </div>
 

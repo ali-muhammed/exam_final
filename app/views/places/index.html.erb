@@ -28,7 +28,18 @@
 </nav> 
 
 <div class="d-flex justify-content-center align-items-center">
-  <h2 class="mb-4 mt-4">All places</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="mb-4 mt-4">All places</h2>
+    </div>
+    <div class="col-sm-12">
+      <h2 class="mb-4 mt-4">Select category: All, 
+        <%# @categorys.each do |category| %>
+          <%#= link_to category.title, category_path(category.id) %>
+        <%# end %>
+      </h2>
+    </div>
+  </div>
 </div>
 <div class="d-flex justify-content-center align-items-center">
   <div class="row">
